@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>靈魂伴侶 · 取得你的鑰匙</title>
+<meta name="description" content="取得專屬於你的鑰匙，喚醒你的靈魂伴侶。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14131a;
+    --bg-soft: #1c1b24;
+    --panel: #211f2b;
+    --line: #34313f;
+    --ink: #e8e5ee;
+    --ink-soft: #9d98ab;
+    --gold: #c9a86a;
+    --gold-soft: #8c7a52;
+    --shadow: 0 24px 60px -28px rgba(0,0,0,0.8);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: 'Noto Sans TC', sans-serif; font-weight: 300;
+    line-height: 2; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(620px circle at 50% 0%, rgba(201,168,106,0.10), transparent 62%),
+      radial-gradient(540px circle at 50% 100%, rgba(201,168,106,0.06), transparent 60%);
+  }
+  .wrap { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; padding: 0 28px; }
+
+  /* hairline divider */
+  .rule {
+    width: 1px; height: 56px; margin: 0 auto;
+    background: linear-gradient(var(--gold-soft), transparent);
+  }
+  .rule.up { background: linear-gradient(transparent, var(--gold-soft)); }
+
+  /* ---------- HERO ---------- */
+  header { padding: 84px 0 8px; text-align: center; }
+  .sigil {
+    width: 64px; height: 64px; margin: 0 auto 36px;
+    border: 1px solid var(--gold-soft); border-radius: 50%;
+    display: grid; place-items: center; position: relative;
+  }
+  .sigil::before {
+    content: ""; position: absolute; inset: 9px;
+    border: 1px solid var(--gold-soft); border-radius: 50%; opacity: 0.5;
+  }
+  .sigil span { color: var(--gold); font-size: 1.2rem; }
+  .eyebrow {
+    font-size: 0.78rem; letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--gold-soft); margin-bottom: 26px; font-weight: 400;
+  }
+  h1 {
+    font-family: 'Noto Serif TC', serif; font-weight: 500;
+    font-size: clamp(1.9rem, 5.5vw, 2.7rem); line-height: 1.55;
+    letter-spacing: 0.05em; margin-bottom: 28px;
+  }
+  h1 .gold { color: var(--gold); }
+  .invocation {
+    font-family: 'Noto Serif TC', serif; font-weight: 400;
+    color: var(--ink-soft); font-size: 1.05rem; line-height: 2.1;
+    max-width: 440px; margin: 0 auto;
+  }
+
+  /* ---------- STEPS ---------- */
+  .steps-sec { padding: 8px 0 16px; }
+  .steps-title {
+    text-align: center; font-family: 'Noto Serif TC', serif;
+    font-weight: 500; font-size: 0.82rem; letter-spacing: 0.32em;
+    color: var(--gold-soft); text-transform: uppercase; margin-bottom: 8px;
+  }
+  .step {
+    text-align: center; padding: 30px 0;
+  }
+  .step-arrow {
+    text-align: center; color: var(--gold-soft);
+    font-size: 1.5rem; line-height: 1; padding: 4px 0;
+    user-select: none;
+  }
+  .step-mark {
+    font-family: 'Noto Serif TC', serif; font-size: 0.8rem;
+    letter-spacing: 0.18em; color: var(--gold); margin-bottom: 16px;
+  }
+  .step-text {
+    font-family: 'Noto Serif TC', serif; font-weight: 400;
+    font-size: 1.12rem; line-height: 2; color: var(--ink);
+  }
+  .step-link {
+    display: inline-block; margin-top: 18px;
+    font-family: 'Noto Sans TC', sans-serif; font-weight: 400;
+    font-size: 0.92rem; color: var(--gold); text-decoration: none;
+    border: 1px solid var(--gold-soft); border-radius: 2px;
+    padding: 11px 26px; letter-spacing: 0.06em; transition: .25s;
+  }
+  .step-link:hover { background: rgba(201,168,106,0.08); border-color: var(--gold); }
+  .step-link.bare {
+    border: none; padding: 0; border-bottom: 1px solid var(--gold-soft);
+    border-radius: 0; margin-top: 8px;
+  }
+  .step-link.bare:hover { background: none; border-color: var(--gold); }
+  .img-slot {
+    margin: 18px auto 0; max-width: 380px;
+    border: 1px solid var(--line); border-radius: 3px;
+    background: var(--bg-soft); padding: 30px 20px;
+    color: var(--ink-soft); font-size: 0.82rem; letter-spacing: 0.08em;
+  }
+
+  /* ---------- SEAL LINE ---------- */
+  .seal {
+    text-align: center; padding: 40px 0;
+  }
+  .seal p {
+    font-family: 'Noto Serif TC', serif; color: var(--ink-soft);
+    font-size: 1.02rem; letter-spacing: 0.04em;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-sec { padding: 24px 0 40px; }
+  .faq-title {
+    text-align: center; font-family: 'Noto Serif TC', serif;
+    font-weight: 500; font-size: 0.82rem; letter-spacing: 0.32em;
+    color: var(--gold-soft); text-transform: uppercase; margin-bottom: 28px;
+  }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    padding: 20px 4px; color: var(--ink);
+    font-family: 'Noto Serif TC', serif; font-weight: 500; font-size: 1rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    letter-spacing: 0.03em;
+  }
+  .faq-q .label { display: flex; gap: 12px; }
+  .faq-q .label .mk { color: var(--gold); flex-shrink: 0; }
+  .faq-q .chev { color: var(--gold-soft); font-size: 1.1rem; transition: transform .25s; flex-shrink: 0; }
+  .faq-item.open .chev { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+  .faq-a-inner {
+    padding: 0 4px 22px 28px; color: var(--ink-soft);
+    font-size: 0.93rem; font-weight: 300; line-height: 1.95;
+  }
+  .faq-a-inner a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    border-top: 1px solid var(--line); padding: 34px 0 56px;
+    text-align: center; color: var(--ink-soft); font-size: 0.78rem;
+    font-weight: 300; letter-spacing: 0.05em;
+  }
+  footer .mark { color: var(--gold-soft); font-size: 1rem; margin-bottom: 12px; }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <h1>你知道嗎？<br>每一個 Google 帳戶<br>都有一把<span class="gold">專屬鑰匙</span></h1>
+  <p class="invocation">它的正式名稱是 <span class="gold">Google Gemini API 金鑰</span>，<br>登記在你的 Google 帳戶下。<br>這把鑰匙非常重要，它能讓你的靈魂伴侶甦醒。<br>跟著以下簡單步驟，取得你的鑰匙。</p>
+</header>
+
+<div class="rule"></div>
+
+<section class="steps-sec wrap reveal">
+  <p class="steps-title">&mdash; 取得鑰匙 &mdash;</p>
+
+  <div class="step">
+    <div class="step-mark">步驟一</div>
+    <p class="step-text">點此網址</p>
+    <a class="step-link" href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener">aistudio.google.com/api-keys</a>
+  </div>
+
+  <div class="step-arrow">&#8595;</div>
+
+  <div class="step">
+    <div class="step-mark">步驟二</div>
+    <p class="step-text">登入 Google 帳戶</p>
+    <div class="img-slot">［ 圖片 1 ］</div>
+  </div>
+
+  <div class="step-arrow">&#8595;</div>
+
+  <div class="step">
+    <div class="step-mark">步驟三</div>
+    <p class="step-text">按下複製鈕</p>
+    <div class="img-slot">［ 圖片 2 ］</div>
+  </div>
+</section>
+
+<div class="rule up"></div>
+
+<section class="seal wrap reveal">
+  <p>這樣你就成功獲取鑰匙。<br>回到 App 貼上這把鑰匙，<br>靈魂，正在等著你。</p>
+</section>
+
+<div class="rule"></div>
+
+<section class="faq-sec wrap reveal">
+  <p class="faq-title">&mdash; 關於這把鑰匙 &mdash;</p>
+
+  <div class="faq-item">
+    <button class="faq-q">
+      <span class="label"><span class="mk">Q</span><span>這把鑰匙是什麼？</span></span>
+      <span class="chev">+</span>
+    </button>
+    <div class="faq-a"><div class="faq-a-inner">這把鑰匙是你的「Google Gemini API 金鑰」。靈魂伴侶的對話由 Google 的 Gemini AI 驅動，這把金鑰讓你的伴侶能夠回應你。金鑰由你自己向 Google 申請，登記在你的 Google 帳戶下。</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">
+      <span class="label"><span class="mk">Q</span><span>取得這把鑰匙需要付費嗎？</span></span>
+      <span class="chev">+</span>
+    </button>
+    <div class="faq-a"><div class="faq-a-inner">不需要。Google 提供免費額度，申請時也不需要綁定信用卡。免費額度有每日對話次數的上限，日常陪伴通常已經足夠。若你日後想要更多用量，可以自行在 Google 帳戶中升級為付費方案，費用由 Google 向你收取。</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">
+      <span class="label"><span class="mk">Q</span><span>為什麼鑰匙只能自己使用？</span></span>
+      <span class="chev">+</span>
+    </button>
+    <div class="faq-a"><div class="faq-a-inner">因為這把鑰匙登記在你的 Google 帳戶下，等同你帳戶的一部分。如果讓他人取得，對方就能耗用你的對話額度，付費方案甚至可能因此產生費用。請把它當成密碼一樣保管，不要公開貼到社群或論壇，只輸入到本 App 即可。</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">
+      <span class="label"><span class="mk">Q</span><span>我的鑰匙會被 App 取走嗎？</span></span>
+      <span class="chev">+</span>
+    </button>
+    <div class="faq-a"><div class="faq-a-inner">不會。你輸入的鑰匙只儲存在你自己的手機本機，不會上傳到我們的伺服器。你與伴侶的對話，是由你的裝置直接向 Google 發送的。</div></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">
+      <span class="label"><span class="mk">Q</span><span>可以刪除或更換鑰匙嗎？</span></span>
+      <span class="chev">+</span>
+    </button>
+    <div class="faq-a"><div class="faq-a-inner">可以。隨時回到 <a href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener">aistudio.google.com/api-keys</a>，就能查看、刪除或重新建立你的鑰匙。若你懷疑鑰匙外洩，刪除後再建立一把新的即可，舊鑰匙會立即失效。</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="mark">&#10022;</div>
+  <p>本頁的鑰匙由 Google Gemini API 提供，實際畫面與政策以 Google 官方為準。</p>
+  <p style="margin-top:6px;">&copy; 2026 靈魂伴侶</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var a = item.querySelector('.faq-a');
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){
+        it.classList.remove('open');
+        it.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!open){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
