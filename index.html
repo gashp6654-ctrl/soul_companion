@@ -107,10 +107,11 @@
   }
   .step-link.bare:hover { background: none; border-color: var(--gold); }
   .img-slot {
-    margin: 18px auto 0; max-width: 380px;
-    border: 1px solid var(--line); border-radius: 3px;
-    background: var(--bg-soft); padding: 30px 20px;
-    color: var(--ink-soft); font-size: 0.82rem; letter-spacing: 0.08em;
+    margin: 18px auto 0; max-width: 300px;
+  }
+  .img-slot img {
+    display: block; width: 100%; height: auto;
+    border: 1px solid var(--line); border-radius: 6px;
   }
 
   /* ---------- SEAL LINE ---------- */
@@ -183,7 +184,7 @@
   <div class="step">
     <div class="step-mark">步驟二</div>
     <p class="step-text">登入 Google 帳戶</p>
-    <div class="img-slot">［ 圖片 1 ］</div>
+    <div class="img-slot"><img src="1.jpg" alt="登入 Google 帳戶畫面"></div>
   </div>
 
   <div class="step-arrow">&#8595;</div>
@@ -191,7 +192,7 @@
   <div class="step">
     <div class="step-mark">步驟三</div>
     <p class="step-text">按下複製鈕</p>
-    <div class="img-slot">［ 圖片 2 ］</div>
+    <div class="img-slot"><img src="2.jpg" alt="按下複製鈕畫面"></div>
   </div>
 </section>
 
