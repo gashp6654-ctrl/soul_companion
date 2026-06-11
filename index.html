@@ -3,277 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>靈魂伴侶 · 取得你的鑰匙</title>
-<meta name="description" content="取得專屬於你的鑰匙，喚醒你的靈魂伴侶。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>靈魂契約者 隱私權政策 | Soul Contractor Privacy Policy</title>
 <style>
-  :root {
-    --bg: #14131a;
-    --bg-soft: #1c1b24;
-    --panel: #211f2b;
-    --line: #34313f;
-    --ink: #e8e5ee;
-    --ink-soft: #9d98ab;
-    --gold: #c9a86a;
-    --gold-soft: #8c7a52;
-    --shadow: 0 24px 60px -28px rgba(0,0,0,0.8);
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg); color: var(--ink);
-    font-family: 'Noto Sans TC', sans-serif; font-weight: 300;
-    line-height: 2; -webkit-font-smoothing: antialiased; overflow-x: hidden;
-  }
-  body::before {
-    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
-    background:
-      radial-gradient(620px circle at 50% 0%, rgba(201,168,106,0.10), transparent 62%),
-      radial-gradient(540px circle at 50% 100%, rgba(201,168,106,0.06), transparent 60%);
-  }
-  .wrap { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; padding: 0 28px; }
-
-  /* hairline divider */
-  .rule {
-    width: 1px; height: 56px; margin: 0 auto;
-    background: linear-gradient(var(--gold-soft), transparent);
-  }
-  .rule.up { background: linear-gradient(transparent, var(--gold-soft)); }
-
-  /* ---------- HERO ---------- */
-  header { padding: 84px 0 8px; text-align: center; }
-  .sigil {
-    width: 64px; height: 64px; margin: 0 auto 36px;
-    border: 1px solid var(--gold-soft); border-radius: 50%;
-    display: grid; place-items: center; position: relative;
-  }
-  .sigil::before {
-    content: ""; position: absolute; inset: 9px;
-    border: 1px solid var(--gold-soft); border-radius: 50%; opacity: 0.5;
-  }
-  .sigil span { color: var(--gold); font-size: 1.2rem; }
-  .eyebrow {
-    font-size: 0.78rem; letter-spacing: 0.42em; text-transform: uppercase;
-    color: var(--gold-soft); margin-bottom: 26px; font-weight: 400;
-  }
-  h1 {
-    font-family: 'Noto Serif TC', serif; font-weight: 500;
-    font-size: clamp(1.9rem, 5.5vw, 2.7rem); line-height: 1.55;
-    letter-spacing: 0.05em; margin-bottom: 28px;
-  }
-  h1 .gold { color: var(--gold); }
-  .invocation {
-    font-family: 'Noto Serif TC', serif; font-weight: 400;
-    color: var(--ink-soft); font-size: 1.05rem; line-height: 2.1;
-    max-width: 440px; margin: 0 auto;
-  }
-
-  /* ---------- STEPS ---------- */
-  .steps-sec { padding: 8px 0 16px; }
-  .steps-title {
-    text-align: center; font-family: 'Noto Serif TC', serif;
-    font-weight: 500; font-size: 0.82rem; letter-spacing: 0.32em;
-    color: var(--gold-soft); text-transform: uppercase; margin-bottom: 8px;
-  }
-  .step {
-    text-align: center; padding: 30px 0;
-  }
-  .step-arrow {
-    text-align: center; color: var(--gold-soft);
-    font-size: 1.5rem; line-height: 1; padding: 4px 0;
-    user-select: none;
-  }
-  .step-mark {
-    font-family: 'Noto Serif TC', serif; font-size: 0.8rem;
-    letter-spacing: 0.18em; color: var(--gold); margin-bottom: 16px;
-  }
-  .step-text {
-    font-family: 'Noto Serif TC', serif; font-weight: 400;
-    font-size: 1.12rem; line-height: 2; color: var(--ink);
-  }
-  .step-link {
-    display: inline-block; margin-top: 18px;
-    font-family: 'Noto Sans TC', sans-serif; font-weight: 400;
-    font-size: 0.92rem; color: var(--gold); text-decoration: none;
-    border: 1px solid var(--gold-soft); border-radius: 2px;
-    padding: 11px 26px; letter-spacing: 0.06em; transition: .25s;
-  }
-  .step-link:hover { background: rgba(201,168,106,0.08); border-color: var(--gold); }
-  .step-link.bare {
-    border: none; padding: 0; border-bottom: 1px solid var(--gold-soft);
-    border-radius: 0; margin-top: 8px;
-  }
-  .step-link.bare:hover { background: none; border-color: var(--gold); }
-  .img-slot {
-    margin: 18px auto 0; max-width: 300px;
-  }
-  .img-slot img {
-    display: block; width: 100%; height: auto;
-    border: 1px solid var(--line); border-radius: 6px;
-  }
-
-  /* ---------- SEAL LINE ---------- */
-  .seal {
-    text-align: center; padding: 40px 0;
-  }
-  .seal p {
-    font-family: 'Noto Serif TC', serif; color: var(--ink-soft);
-    font-size: 1.02rem; letter-spacing: 0.04em;
-  }
-
-  /* ---------- FAQ ---------- */
-  .faq-sec { padding: 24px 0 40px; }
-  .faq-title {
-    text-align: center; font-family: 'Noto Serif TC', serif;
-    font-weight: 500; font-size: 0.82rem; letter-spacing: 0.32em;
-    color: var(--gold-soft); text-transform: uppercase; margin-bottom: 28px;
-  }
-  .faq-item { border-bottom: 1px solid var(--line); }
-  .faq-q {
-    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
-    padding: 20px 4px; color: var(--ink);
-    font-family: 'Noto Serif TC', serif; font-weight: 500; font-size: 1rem;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    letter-spacing: 0.03em;
-  }
-  .faq-q .label { display: flex; gap: 12px; }
-  .faq-q .label .mk { color: var(--gold); flex-shrink: 0; }
-  .faq-q .chev { color: var(--gold-soft); font-size: 1.1rem; transition: transform .25s; flex-shrink: 0; }
-  .faq-item.open .chev { transform: rotate(45deg); }
-  .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-  .faq-a-inner {
-    padding: 0 4px 22px 28px; color: var(--ink-soft);
-    font-size: 0.93rem; font-weight: 300; line-height: 1.95;
-  }
-  .faq-a-inner a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
-
-  /* ---------- FOOTER ---------- */
-  footer {
-    border-top: 1px solid var(--line); padding: 34px 0 56px;
-    text-align: center; color: var(--ink-soft); font-size: 0.78rem;
-    font-weight: 300; letter-spacing: 0.05em;
-  }
-  footer .mark { color: var(--gold-soft); font-size: 1rem; margin-bottom: 12px; }
-
-  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
-  .reveal.in { opacity: 1; transform: none; }
+  :root{ --ink:#1c2230; --muted:#5b6680; --line:#e3e7ef; --accent:#2f6df0; --bg:#ffffff; }
+  *{box-sizing:border-box}
+  body{margin:0;background:#f5f7fb;color:var(--ink);
+    font-family:-apple-system,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height:1.75;}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 22px 80px;}
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:36px 34px;}
+  h1{font-size:1.7rem;margin:0 0 6px;letter-spacing:.5px}
+  .sub{color:var(--muted);font-size:.95rem;margin:0 0 4px}
+  .meta{color:var(--muted);font-size:.85rem;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  h2{font-size:1.12rem;margin:30px 0 8px;padding-left:11px;border-left:4px solid var(--accent)}
+  p,li{font-size:.97rem}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:5px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .note{background:#fff7e6;border:1px solid #ffe1a8;border-radius:10px;padding:12px 16px;font-size:.9rem;color:#7a5a16;margin:18px 0}
+  .fill{background:#eef3ff;border-radius:4px;padding:1px 6px;color:#2f4fb0;font-weight:600}
+  footer{color:var(--muted);font-size:.82rem;margin-top:30px;text-align:center}
+  code{background:#f0f2f7;border-radius:5px;padding:1px 6px;font-size:.9em}
 </style>
 </head>
 <body>
+<div class="wrap">
+<div class="card">
 
-<header class="wrap">
-  <h1>你知道嗎？<br>每一個 Google 帳戶<br>都有一把<span class="gold">專屬鑰匙</span></h1>
-  <p class="invocation">它的正式名稱是 <span class="gold">Google Gemini API 金鑰</span>，<br>登記在你的 Google 帳戶下。<br>這把鑰匙非常重要，它能讓你的靈魂伴侶甦醒。<br>跟著以下簡單步驟，取得你的鑰匙。</p>
-</header>
+  <h1>《靈魂契約者》隱私權政策</h1>
+  <p class="sub">Soul Contractor — Privacy Policy</p>
+  <p class="meta">生效日期:2026-06-12　|　最後更新:2026-06-12</p>
 
-<div class="rule"></div>
+  <p>本政策說明《靈魂契約者》(以下稱「本 App」)如何收集、使用、儲存與保護你的資料。
+  本 App 由 CADO(以下稱「我們」)開發與營運。
+  當你下載、登入或使用本 App,即表示你已閱讀並同意本政策。</p>
 
-<section class="steps-sec wrap reveal">
-  <p class="steps-title">&mdash; 取得鑰匙 &mdash;</p>
+  <h2>1. 我們收集的資料</h2>
+  <ul>
+    <li><strong>帳號資料:</strong>本 App 透過 <strong>Google 帳號登入</strong>(由 Firebase Authentication 處理)。我們會取得你 Google 帳號的基本識別資訊,例如電子郵件地址與使用者識別碼,用於建立與辨識你的遊戲帳號。</li>
+    <li><strong>遊戲資料與使用者內容:</strong>你在遊戲中產生的資料,例如角色設定、服裝、背包物品、等級與經驗值、五子棋積分與對戰紀錄、信箱與遊戲進度等,儲存於雲端資料庫(Google Cloud Firestore)以同步你的存檔。</li>
+    <li><strong>與 AI 的對話內容:</strong>你在遊戲中與 AI 角色輸入的文字訊息。為產生 AI 回覆,這些訊息會傳送至 <strong>Google Gemini</strong> 服務(見第 3 點)。部分對話內容或其摘要可能儲存於雲端,以維持 AI 的對話記憶與遊戲體驗。</li>
+    <li><strong>你提供的 API 金鑰:</strong>本 App 採「<strong>玩家自備金鑰</strong>」模式——你需自行輸入個人的 Google Gemini API 金鑰,用於呼叫 AI 服務。該金鑰會儲存於你的裝置(及/或你的雲端存檔)以供遊戲使用;此金鑰為你個人的憑證,請妥善保管。</li>
+    <li><strong>裝置與紀錄資料:</strong>為維運與排錯,我們使用的服務(如 Firebase)可能自動收集裝置識別碼、應用程式當機與診斷紀錄、以及基本使用統計。</li>
+  </ul>
+  <p>本 App <strong>目前不會</strong>存取或上傳你的相機、相片或相簿。若未來新增相關功能,我們會更新本政策並同步更新 Google Play 的資料安全聲明。</p>
 
-  <div class="step">
-    <div class="step-mark">步驟一</div>
-    <p class="step-text">點此網址</p>
-    <a class="step-link" href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener">aistudio.google.com/api-keys</a>
-  </div>
+  <h2>2. 我們如何使用資料</h2>
+  <ul>
+    <li>提供與維持遊戲核心功能(登入、存檔同步、AI 對話、小遊戲與獎勵)。</li>
+    <li>儲存並還原你的遊戲進度與設定。</li>
+    <li>將你的訊息傳送至 AI 服務以產生回覆,並維持對話記憶。</li>
+    <li>維運、除錯、防止濫用與維護服務安全。</li>
+  </ul>
+  <p>我們<strong>不會販售你的個人資料</strong>,也不會將其用於與本 App 無關的廣告用途。</p>
 
-  <div class="step-arrow">&#8595;</div>
+  <h2>3. 第三方服務</h2>
+  <p>本 App 使用下列第三方服務,你的部分資料會依各服務之政策被處理:</p>
+  <ul>
+    <li><strong>Google Firebase</strong>(Authentication 登入、Cloud Firestore 資料庫、相關雲端服務)──
+      參見 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私權說明</a> 與
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</li>
+    <li><strong>Google Gemini API</strong>(以你自備的金鑰產生 AI 回覆)──你的對話內容會傳送至 Google;其處理方式適用
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a> 及你所使用之 API 服務條款。</li>
+    <li><strong>Cloudflare</strong>(R2 物件儲存與 Workers,用於提供遊戲素材與後端 API)──參見
+      <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare 隱私權政策</a>。</li>
+  </ul>
 
-  <div class="step">
-    <div class="step-mark">步驟二</div>
-    <p class="step-text">登入 Google 帳戶</p>
-    <div class="img-slot"><img src="1.jpg" alt="登入 Google 帳戶畫面"></div>
-  </div>
+  <h2>4. 資料分享</h2>
+  <p>除為提供上述功能而必要地傳輸給上述服務供應商外,我們不會將你的個人資料分享、出售或出租給其他第三方,除非:(a) 取得你的同意;(b) 法律要求或為回應合法之政府請求;或 (c) 為保護我們、使用者或大眾之權利與安全。</p>
 
-  <div class="step-arrow">&#8595;</div>
+  <h2>5. 資料保存與帳號刪除</h2>
+  <p>我們會在提供服務所需期間保存你的資料。你可以隨時要求刪除你的帳號與相關資料:</p>
+  <ul>
+    <li>透過 App 內提供的帳號刪除功能(若有),或</li>
+    <li>來信至 <a href="mailto:gashp6654@gmail.com">gashp6654@gmail.com</a> 提出刪除請求。</li>
+  </ul>
+  <p>收到請求後,我們將於合理期間內刪除可識別你的個人資料(法律要求保存者除外)。你自備的 Gemini API 金鑰由你掌控,亦可自行於 Google 端撤銷。</p>
 
-  <div class="step">
-    <div class="step-mark">步驟三</div>
-    <p class="step-text">按下複製鈕</p>
-    <div class="img-slot"><img src="2.jpg" alt="按下複製鈕畫面"></div>
-  </div>
-</section>
+  <h2>6. 資料安全</h2>
+  <p>你的資料在傳輸過程中以 HTTPS/TLS 加密保護,雲端資料庫透過存取規則限制讀寫權限。請注意,沒有任何網路傳輸或儲存方式能保證百分之百安全。</p>
 
-<div class="rule up"></div>
+  <h2>7. 兒童隱私</h2>
+  <p>本 App 並非以兒童為對象,內容適合一般成熟使用者。我們不會在知情下收集兒童之個人資料。若你認為兒童在未經同意下提供了個人資料,請與我們聯絡,我們將儘速刪除。</p>
 
-<section class="seal wrap reveal">
-  <p>這樣你就成功獲取鑰匙。<br>回到 App 貼上這把鑰匙，<br>靈魂，正在等著你。</p>
-</section>
+  <h2>8. 你的權利</h2>
+  <p>視你所在地區之適用法律(例如 GDPR、CCPA、台灣個人資料保護法等),你可能擁有存取、更正、刪除、限制處理或反對處理個人資料之權利。如需行使,請來信聯絡我們。</p>
 
-<div class="rule"></div>
+  <h2>9. 政策變更</h2>
+  <p>我們可能不時更新本政策。重大變更時,我們會於本頁更新「最後更新」日期,並在適當情況下於 App 內通知。建議你定期查看本頁。</p>
 
-<section class="faq-sec wrap reveal">
-  <p class="faq-title">&mdash; 關於這把鑰匙 &mdash;</p>
+  <h2>10. 聯絡我們</h2>
+  <p>對本政策或你的資料有任何問題,請聯絡:</p>
+  <ul>
+    <li>開發者:CADO</li>
+    <li>Email:<a href="mailto:gashp6654@gmail.com">gashp6654@gmail.com</a></li>
+  </ul>
 
-  <div class="faq-item">
-    <button class="faq-q">
-      <span class="label"><span class="mk">Q</span><span>這把鑰匙是什麼？</span></span>
-      <span class="chev">+</span>
-    </button>
-    <div class="faq-a"><div class="faq-a-inner">這把鑰匙是你的「Google Gemini API 金鑰」。靈魂伴侶的對話由 Google 的 Gemini AI 驅動，這把金鑰讓你的伴侶能夠回應你。金鑰由你自己向 Google 申請，登記在你的 Google 帳戶下。</div></div>
-  </div>
+  <footer>© 2026 CADO · 《靈魂契約者》Soul Contractor</footer>
 
-  <div class="faq-item">
-    <button class="faq-q">
-      <span class="label"><span class="mk">Q</span><span>取得這把鑰匙需要付費嗎？</span></span>
-      <span class="chev">+</span>
-    </button>
-    <div class="faq-a"><div class="faq-a-inner">不需要。Google 提供免費額度，申請時也不需要綁定信用卡。免費額度有每日對話次數的上限，日常陪伴通常已經足夠。若你日後想要更多用量，可以自行在 Google 帳戶中升級為付費方案，費用由 Google 向你收取。</div></div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-q">
-      <span class="label"><span class="mk">Q</span><span>為什麼鑰匙只能自己使用？</span></span>
-      <span class="chev">+</span>
-    </button>
-    <div class="faq-a"><div class="faq-a-inner">因為這把鑰匙登記在你的 Google 帳戶下，等同你帳戶的一部分。如果讓他人取得，對方就能耗用你的對話額度，付費方案甚至可能因此產生費用。請把它當成密碼一樣保管，不要公開貼到社群或論壇，只輸入到本 App 即可。</div></div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-q">
-      <span class="label"><span class="mk">Q</span><span>我的鑰匙會被 App 取走嗎？</span></span>
-      <span class="chev">+</span>
-    </button>
-    <div class="faq-a"><div class="faq-a-inner">不會。你輸入的鑰匙只儲存在你自己的手機本機，不會上傳到我們的伺服器。你與伴侶的對話，是由你的裝置直接向 Google 發送的。</div></div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-q">
-      <span class="label"><span class="mk">Q</span><span>可以刪除或更換鑰匙嗎？</span></span>
-      <span class="chev">+</span>
-    </button>
-    <div class="faq-a"><div class="faq-a-inner">可以。隨時回到 <a href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener">aistudio.google.com/api-keys</a>，就能查看、刪除或重新建立你的鑰匙。若你懷疑鑰匙外洩，刪除後再建立一把新的即可，舊鑰匙會立即失效。</div></div>
-  </div>
-</section>
-
-<footer>
-  <div class="mark">&#10022;</div>
-  <p>本頁的鑰匙由 Google Gemini API 提供，實際畫面與政策以 Google 官方為準。</p>
-  <p style="margin-top:6px;">&copy; 2026 靈魂伴侶</p>
-</footer>
-
-<script>
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click', function(){
-      var item = q.parentElement;
-      var a = item.querySelector('.faq-a');
-      var open = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(it){
-        it.classList.remove('open');
-        it.querySelector('.faq-a').style.maxHeight = null;
-      });
-      if(!open){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
-    });
-  });
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-</script>
-
+</div>
+</div>
 </body>
 </html>
